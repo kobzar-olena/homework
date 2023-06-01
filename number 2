@@ -1,0 +1,117 @@
+
+// завдання 1
+//let c = 3;
+//let b = 2;
+let a = 1;
+console.log (a<b<c);
+// завдання 2
+let x = 1;
+let y = 2;
+
+console.log(1 +"2"); // ""12""
+console.log(typeof res1)
+
+console.log(1 < 2); // ""true2""
+
+let x = "1";
+let bln = Boolean (x);
+console.log(bln);
+console.log(typeof bln);
+
+let b = "12";
+let data  = +b;
+console.log(num);
+console.log(typeof res1)
+
+// завдання 3
+
+const isAdult = prompt("Скільки Вам років?", "");
+const res = (isAdult>=18) ? "Ви досягли повнолітнього віку" : "Ви ще надто молодий";
+console.log(res);
+//або
+let isAdult = prompt("Який Ваш вік?");
+if(isAdult >=18){
+  console.log("Ви досягли повнолітнього віку");
+} else{
+  console.log("Ви ще надто молодий");
+} 
+
+//завдання 4
+let arr = [4, 5, 2, 1, 6, 5, 3, 5, 2, 5]
+let counter = {};
+for (let num of arr) {
+  if (counter[num]) {
+    counter[num]++;
+  } else {
+    counter[num] = 1;
+  }
+}
+
+let maxCount = 0;
+let mostFrequentNum;
+
+for (let num in counter) {
+  if (counter[num] > maxCount) {
+    maxCount = counter[num];
+    mostFrequentNum = Number(num);
+  }
+}
+
+let data = mostFrequentNum;
+
+arr = arr.filter(num => num !== mostFrequentNum);
+
+console.log(arr);
+//Завдання 5
+let a=prompt ("Введіть сторону  трикутинка a=", "");
+let b=prompt ("Введіть сторону  трикутинка b=", "");
+let c=prompt ("Введіть сторону  трикутинка, або гіпотунузу c=", "");
+let p= ((a+b+c)/2);
+let sol= (p*(p-a)*(p-b)*(p-c));
+let square= Math.sqrt(sol);
+let parsedNum = parseFloat(square);
+let roundedNum = parsedNum.toFixed(3);
+console.log(roundedNum);
+if(a <= 0){
+  console.log("Incorrect data");
+}
+if(b <= 0){
+  console.log("Incorrect data");
+}
+if(c <= 0){
+  console.log("Incorrect data");
+}
+let side = Math.sqrt((a**2)+(b**2));
+let delta = (side**2);
+console.log(delta);
+if (delta == side){
+console.log("трикутник прямркутний!");
+} else {
+  if (delta != side)
+    console.log("трикутник не прямокутний!");
+}
+//Завдання 6
+function calc(a, b, op) {
+  let result;
+
+  if (op === 1) {
+    result = a - b;
+  } else if (op === 2) {
+    result = a * b;
+  } else if (op === 3) {
+    result = a / b;
+  } else {
+    result = a + b;
+  }
+
+  return result;
+}
+//Завдання 7
+findUnique([1, 2, 3, 5, 3]);  
+findUnique([1, 2, 3, 5, 11]); 
+function findUnique(arr) {
+  let uniqueElements = new Set(arr);
+  return uniqueElements.size === arr.length;
+}
+console.log(findUnique([1, 2, 3, 5, 3])); 
+console.log(findUnique([1, 2, 3, 5, 11]));
