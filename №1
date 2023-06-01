@@ -1,0 +1,70 @@
+//завдання 1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("Олена");
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
+//завдання 2
+console.log("Кобзар");
+//завдання 3
+let one = "age";
+let two = 24;
+console.log(one + " " + two);
+one = two;
+console.log(one);
+//завдання 4
+let user = {
+  name: "Олена",
+  age: 24,
+  let info = true;
+  newInfo: undefined,
+  info: null
+};
+console.log(user);
+//завдання 5
+var isAdult = confirm("Ви досягли повнолітнього віку?");
+console.log(isAdult);
+//завдання 6
+var firstName = "Олена";
+var lastName = "Кобзар";
+var group = "ГБ-5";
+var birthYear = 1998;
+
+var isMarried = false;
+
+console.log(typeof birthYear + ": " + birthYear);
+console.log(typeof isMarried + ": " + isMarried);
+console.log(typeof firstName + ": " + firstName);
+console.log(typeof lastName + ": " + lastName);
+console.log(typeof group + ": " + group);
+
+var nullVariable = null;
+var undefinedVariable;
+
+console.log(typeof nullVariable);
+console.log(typeof undefinedVariable);
+//завдання 7
+var login = prompt("Введіть логін:");
+var email = prompt("Введіть електронну пошту:");
+var password = prompt("Введіть пароль:");
+
+var message = "Dear User, your email is " + email + ", your password is " + password + ".";
+alert(message);
+//завдання 8
+let second = 60;
+let hour = 1;
+console.log(second * hour);
+let day = 24;
+console.log(second * day);
+let months = 30;
+console.log(second *  months);
