@@ -1,0 +1,23 @@
+//Задача 1
+const arr = [5, 3, 4, 5,6,7,3];
+function compact (array){
+  return Array.from(new Set(array));
+}
+//Задача 2
+let arr = 2;
+while (arr <=9){
+console.log (arr);
+arr++
+}
+або
+for(let arr = 2; arr <=9; arr++){
+  console.log(arr);
+} 
+Задача 3
+let a = 1;
+let b = 5;
+for (let i = a; a <= b; i++){
+for (let j = 1; j <= i - a + 1; j++){
+ console.log(i);
+}
+}
