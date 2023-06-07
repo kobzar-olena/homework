@@ -21,3 +21,43 @@ for (let j = 1; j <= i - a + 1; j++){
  console.log(i);
 }
 }
+//Задача 4
+function randArray(k) {
+  const randomArray = [];
+  for (let i = 0; i < k; i++) {
+    randArray.push(Math.floor(MAth.random() * 499) + 1);
+  } return randArray;
+}
+//Задача 5
+let  arr = [5, “Limit”, 12, “a”, “3”, 99, 2, [2, 4, 3, “33”, “a”, “text”], “strong”, “broun”];
+function newArrays(array) {
+  const srtArr = [];
+  const numArr = [];
+  const numberArray = array.flat();
+  for (let i = 0; i < numberArray.length; i++) {
+    const el = numberArray[i];
+    if (typeof el === "number") {
+      numArr.push(el);
+    }else if (typeof el === "string") {
+      srtArr.push(el);
+    }
+  }
+  console.log(srtArr);
+  console.log(numArr);
+}
+//Задача 6
+let date = new Date();
+let currentHour = date.getHours();
+
+if (currentHour >= 23 || currentHour <=5) {
+  alert("Доброї ночі");
+}
+else if (currentHour > 5 && currentHour <=11) {
+  alert("Доброго ранку");
+}
+else if (currentHour > 11 && currentHour <=17) {
+  alert("Доброго дня");
+}
+else if (currentHour > 17 && currentHour < 23) {
+  alert("Доброго вечора");
+}
