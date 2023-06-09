@@ -1,0 +1,127 @@
+//Задача 1
+function sumSliceArray (arr, first, second) {
+if (typeof first !== 'number' || typeof second !== 'number') {
+  throw new Error('Помилка, введено відємне числове значення');
+}
+if (first >= arr.length || second >= arr.length) {
+  throw new Error('Помилка: одне з чисел більше довжини масиву');
+}
+
+return arr[first] + arr[second];
+}
+try {
+  const arr = [3, 5, 7, 9, 11];
+  const first = 0;
+  const second = 1;
+  const result = sumSliceArray(arr, first, second);
+  console.log(result);
+} catch (error) {
+  console.log(error.message);
+}
+//Задача 2
+function checkAge() {
+try {
+  let name = prompt ('Яке Ваше імя?');
+  if (name === '') {
+    throw new Error ('The field is empty! Please enter your age');
+  }
+  let age = prompt ('Який Ваш вік?');
+  if (age < 18) {
+    throw new RangeError ('Age is < 18');
+  }
+   if (age > 70) {
+    throw new RangeError ('Age is > 70');
+  }
+  if (isNaN (age)) {
+    throw new TypeError ('Введено нечислове значення!');
+  }
+  let status = prompt ('Який Ваш статус? (адмін, модератор, користувач)');
+  if (status !== 'адмін' && status !== 'модератор' && status !== 'користувач') {
+    throw new EvalError('Неправильне слово!');
+  }
+  console.log ();
+  } catch (error) {
+    console.log (error.stack);
+  } 
+}
+checkAge();
+//Задача 3
+function calcRectangleArea() {
+  try {
+let width = prompt ("Введіть ширину прямокутника a=", "");
+if (isNaN (width)) {
+  throw new TypeError ('Введено нечислове значення!');
+ }
+let height = prompt ("Введіть висоту прямокутника b=", "");
+if (isNaN (height)) {
+  throw new TypeError ('Введено нечислове значення!');
+ }
+let side = width * height;
+console.log(side);
+}catch (error) {
+  console.log (error.message);
+}
+}
+calcRectangleArea(); 
+//Задача 4
+class MonthException {
+  constructor(message) {
+    this.name = "MonthException";
+    this.message = message;
+  }
+}
+
+function showMonthName(month) {
+  try {
+    if (month < 1 || month > 12) {
+      throw new MonthException('Incorrect month number!');
+    }
+
+    const monthNames = [
+      'Січень',
+      'Лютий',
+      'Березень',
+      'Квітень',
+      'Травень',
+      'Червень',
+      'Липень',
+      'Серпень',
+      'Вересень',
+      'Жовтень',
+      'Листопад',
+      'Грудень'
+    ];
+
+    return monthNames[month - 1];
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+try {
+  console.log(showMonthName(6));
+} catch (error) {
+  console.log(error.message);
+}
+//Задача 5
+function showUser(id) {
+  if (id < 0) {
+    throw new Error('Помилка: введено від’ємне id');
+  }
+  return { id: id };
+}
+function showUsers(ids) {
+  const users = [];
+  for (let id of ids) {
+    try {
+      const user = showUser(id);
+      users.push(user);
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+  return users;
+}
+const ids = [7, -12, 44, 22];
+const users = showUsers(ids);
+console.log(users);
