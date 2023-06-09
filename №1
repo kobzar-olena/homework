@@ -61,10 +61,11 @@ var password = prompt("Введіть пароль:");
 var message = "Dear User, your email is " + email + ", your password is " + password + ".";
 alert(message);
 //завдання 8
-let second = 60;
+let second = 3600;
 let hour = 1;
 console.log(second * hour);
 let day = 24;
 console.log(second * day);
-let months = 30;
+let months = 720;
 console.log(second *  months);
+//якщо брати 30 днів в місяці
